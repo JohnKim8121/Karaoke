@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Mixer App</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- YouTube Section -->
+        <div class="youtube-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search YouTube videos...">
+                <button id="searchButton">Search</button>
+                <button id="voiceSearchButton">🎤</button>
+            </div>
+            <div id="searchResults"></div>
+            <div id="videoPlayer"></div>
+            <div class="youtube-controls">
+                <button id="prevButton">Previous</button>
+                <button id="playPauseButton">Play</button>
+                <button id="nextButton">Next</button>
+                <div class="volume-control">
+                    <label>YouTube Volume:</label>
+                    <input type="range" id="youtubeVolume" min="0" max="100" value="100">
+                </div>
+            </div>
+        </div>
+
+        <!-- Audio Controls Section -->
+        <div class="audio-controls">
+            <div class="mic-controls">
+                <button id="toggleMic">Enable Microphone</button>
+                <div class="volume-control">
+                    <label>Microphone Volume:</label>
+                    <input type="range" id="micVolume" min="0" max="100" value="100">
+                </div>
+            </div>
+            
+            <div class="effects-controls">
+                <div class="effect-control">
+                    <label>Reverb Mix:</label>
+                    <input type="range" id="reverbMix" min="0" max="100" value="50">
+                </div>
+                <div class="effect-control">
+                    <label>Filter Frequency:</label>
+                    <input type="range" id="filterFreq" min="20" max="20000" value="2000">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/config.js" type="module"></script>
+    <script src="superpowered/superpowered.js" type="module"></script>
+    <script src="js/youtube-handler.js" type="module"></script>
+    <script src="js/audio-processor.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html> 
